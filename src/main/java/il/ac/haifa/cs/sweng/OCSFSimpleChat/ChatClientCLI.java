@@ -38,6 +38,7 @@ public class ChatClientCLI {
 							message = "Shir, Daniel";
 						}else if(message.startsWith("#send")){
 								message = message.substring(6);
+
 							}
 							client.sendToServer(message);
 					} catch (IOException e1) {
