@@ -30,16 +30,6 @@ public class ChatClientCLI {
 						message = reader.readLine();
 						if (message.isBlank())
 							continue;
-
-						if (message.equalsIgnoreCase("#exit")) {
-							System.out.println("Closing connection.");
-								client.closeConnection();
-						}else if(message.startsWith("#sendSubmitters")){
-							message = "Shir, Daniel";
-						}else if(message.startsWith("#send")){
-								message = message.substring(6);
-
-							}
 							client.sendToServer(message);
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
